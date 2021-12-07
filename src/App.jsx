@@ -21,15 +21,17 @@ class App extends Component {
     const user = this.state.user;
     return (
       <div>
-        <NavigationBar user={user} />
+        <NavBar user={user} />
         <div>
           <Switch>
-            <Route path ="/" exact component ={HomePage}/>
-            <Route path ="/buyer" component ={BuyerPage}/>
-            <Route path ="/seller" component ={SellerPage}/>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/buyer" component={BuyerPage} />
+            <Route path="/seller" component={SellerPage} />
           </Switch>
         </div>
       </div>
     );
   }
 }
+
+export default App;
