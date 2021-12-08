@@ -9,6 +9,7 @@ import jwtDecode from "jwt-decode";
 import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./App.css";
+import Footer from "./Footer/footer";
 
 class App extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class App extends Component {
             <Route path="/seller" element={<SellerPage />} />
           </Routes>
         </Router>
+        <Footer />
       </div>
     );
   }
