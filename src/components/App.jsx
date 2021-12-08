@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Component } from 'react';
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./components/HomePage/homePage";
-import BuyerPage from "./components/BuyerPage/buyerPage";
-import SellerPage from "./components/SellerPage/sellerPage";
-import NavBar from "./components/NavBar/navBar";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./HomePage/homePage";
+import BuyerPage from "./BuyerPage/buyerPage";
+import SellerPage from "./SellerPage/sellerPage";
+import NavBar from "./NavBar/navBar";
 import jwtDecode from "jwt-decode";
 
 class App extends Component {
@@ -28,14 +28,14 @@ class App extends Component {
     const user = this.state.user;
     return (
       <div>
+        <Router>
         <NavBar user={user} />
-        <div>
           <Routes>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/buyer" component={BuyerPage} />
-            <Route path="/seller" component={SellerPage} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/buyer" element={<BuyerPage />} />
+            <Route path="/seller" element={<SellerPage />} />
           </Routes>
-        </div>
+        </Router>
       </div>
     );
   }
