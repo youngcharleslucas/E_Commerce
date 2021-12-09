@@ -10,7 +10,15 @@ const NavBar = ({ user }) => {
   return (
     <div>
       <Navbar bg="blue" variant="dark">
-        <Navbar.Brand>Logo</Navbar.Brand>
+        <Navbar.Brand>
+          <img
+            src="https://i.ibb.co/n79GMw5/Blank-2000-x-2000-500-x-500.png"
+            alt="Blank-2000-x-2000-3"
+            border="0"
+            height="100"
+            margin="0"
+          />
+        </Navbar.Brand>
         <Nav>
           <Nav.Link href="/">Home</Nav.Link>
           <NavDropdown title="Products">
