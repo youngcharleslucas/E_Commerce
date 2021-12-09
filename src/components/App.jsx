@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./App.css";
 import Footer from "./Footer/footer";
+import RegisterUser from "./RegisterUser/RegisterUser";
 
 class App extends Component {
   constructor(props) {
@@ -42,7 +43,8 @@ class App extends Component {
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/buyer" element={<BuyerPage />} />
-            <Route path="/seller" element={<SellerPage />} />            
+            <Route path="/seller" element={<SellerPage />} />
+            <Route path="/login/register" element={<RegisterUser />} />
           </Routes>
         </Router>
         <Footer />
