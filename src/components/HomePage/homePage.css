@@ -1,6 +1,6 @@
 .bgimage {
   width: 100%;
-  background: url("https://images.unsplash.com/photo-1587006158786-7b79525a2147");
+  border-color: black;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -22,4 +22,17 @@ h1 {
   width: 5px;
   height: auto;
   display: block;
+}
+
+body {
+  background: url("https://images.unsplash.com/photo-1587006158786-7b79525a2147");
+  background-position: center;
+  background-size: 100%;
+}
+
+.image {
+  margin: 0;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
