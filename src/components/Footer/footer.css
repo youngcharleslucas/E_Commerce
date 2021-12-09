@@ -40,10 +40,11 @@
   font-size: 14px;
 }
 
-a:hover {
+.first a:hover {
   color: #50e5fe;
 }
-a {
+
+.first p:active {
   color: white;
   text-decoration: none;
 }
