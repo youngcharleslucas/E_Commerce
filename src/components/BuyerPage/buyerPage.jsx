@@ -29,14 +29,13 @@ const BuyerPage = (props) => {
               <Card.Body>
                 <Card.Title>{element.name}</Card.Title> 
                   <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    {element.description}
                   </Card.Text>
               </Card.Body>
               <ListGroup className="list-group-flush">
-                <ListGroupItem>Cras justo odio</ListGroupItem>
-                <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                <ListGroupItem>{element.category}</ListGroupItem>
+                <ListGroupItem>{element.rating}</ListGroupItem>
+                <ListGroupItem>{element.price}</ListGroupItem>
               </ListGroup>
               <Card.Body>
                 <Card.Link href="#">More Info</Card.Link>
