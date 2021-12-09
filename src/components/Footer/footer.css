@@ -1,5 +1,91 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .footer {
-  position: fixed;
+  background: black;
+  background-size: cover;
+}
+
+.first {
+  margin-top: 20px;
+  color: #50e5fe;
+  font-family: "Poppins", sans-serif;
+}
+
+.first h4 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+  font-size: 1.6em;
+  color: #50e5fe;
+  padding-bottom: 0.5em;
+}
+
+.first h4::after {
+  content: "";
+  background: white;
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.col-md-4 img {
+  width: 50%;
+}
+
+.first p {
+  font-size: 14px;
+}
+
+a:hover {
+  color: #50e5fe;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.second {
+  text-align: center;
+}
+.third {
+  margin-top: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: right;
+}
+
+.third h4 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+  font-size: 1.6em;
+  color: #50e5fe;
+  padding-bottom: 0.5em;
+}
+
+.third h4::after {
+  content: "";
+  background: white;
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* code that was updated:
+  link.footer {
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -10,4 +96,70 @@
 
 .logo {
   transform: scale(1);
+}  */
+/* .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+  background-image: url("https://i.ibb.co/YXN7W4r/anastase-maragos-m-HDOBf-SI7-I-unsplash.png");
+  border-top: solid 1px black;
+  text-align: center;
 }
+
+.footer p {
+  margin-top: 30px;
+} 
+
+ <a href="https://ibb.co/YXN7W4r"><img src="https://i.ibb.co/YXN7W4r/anastase-maragos-m-HDOBf-SI7-I-unsplash.png" alt="anastase-maragos-m-HDOBf-SI7-I-unsplash" border="0"></a>
+
+footer {
+  background: black;
+  color: #aaa;
+  padding-top: 100px;
+  padding-bottom: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+}
+
+footer a {
+  color: #aaa;
+}
+
+footer a:hover {
+  color: #50e5fe;
+}
+
+footer h3 {
+  color: #0894d1;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+footer .three-column {
+  overflow: hidden;
+  width: 33.33%;
+}
+
+footer .three-column li {
+  width: 33%;
+  padding: 0px 0;
+}
+
+footer .copyright {
+  padding: 15px 0;
+  background: black;
+  margin-top: 20px;
+  font-size: 15px;
+  width: 100%;
+}
+
+footer .container {
+  text-align: center;
+}
+
+footer .contact {
+  font-weight: bold;
+  padding-bottom: 0;
+}  */

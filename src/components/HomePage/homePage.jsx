@@ -10,7 +10,7 @@ const HomePage = (props) => {
       <Container>
         <React.Fragment>
           <Image
-            src="https://i.ibb.co/W2q3tVS/anastase-maragos-m-HDOBf-SI7-I-unsplash.jpg"
+            src="https://i.ibb.co/NyQ3STw/anastase-maragos-m-HDOBf-SI7-I-unsplash.jpg"
             fluid
           />
           <h1>Handmade furniture, just for you.</h1>
@@ -31,7 +31,3 @@ const HomePage = (props) => {
 };
 
 export default HomePage;
-
-{
-  /* <a href="https://ibb.co/W2q3tVS"><img src="https://i.ibb.co/W2q3tVS/anastase-maragos-m-HDOBf-SI7-I-unsplash.jpg" alt="anastase-maragos-m-HDOBf-SI7-I-unsplash" border="0"></a> */
-}

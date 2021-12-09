@@ -12,7 +12,7 @@ const NavBar = ({ user }) => {
       <Navbar bg="blue" variant="dark">
         <Navbar.Brand>
           <img
-            src="https://i.ibb.co/n79GMw5/Blank-2000-x-2000-500-x-500.png"
+            src="https://i.ibb.co/YQWYb7B/Blank-2000-x-2000-500-x-500-1.png"
             alt="Blank-2000-x-2000-3"
             border="0"
             height="100"
