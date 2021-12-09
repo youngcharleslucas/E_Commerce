@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <NavBar />
+          <NavBar user={user}/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
