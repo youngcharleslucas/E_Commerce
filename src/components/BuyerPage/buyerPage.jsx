@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Card, Container, ListGroup , ListGroupItem, CardGroup } from "react-bootstrap";
 import './buyerPage.css'
+import axios from "axios";
 
 const BuyerPage = (props) => {
+  {
+    const getProduct = async () => {
+      let response = await.axios.get('https://localhost:44394/api/products')
+      console.log(response.data.items)
+    }
+  }
   return (
     <Container fluid>
       <React.Fragment>
