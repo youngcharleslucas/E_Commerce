@@ -1,0 +1,24 @@
+.bgimage {
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1587006158786-7b79525a2147');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align:center;
+    text-decoration-color: black;
+    text-decoration-style: solid;
+    padding-block: 10px;
+    padding-top: 20%;
+    padding-bottom:20%
+}
+
+.bgimage h1 {
+    color:white;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:block;
+}
