@@ -13,6 +13,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./App.css";
 import Footer from "./Footer/footer";
 import RegisterUser from "./RegisterUser/RegisterUser";
+import ShoppingCart from "./ShoppingCart/shoppingcart";
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class App extends Component {
             <Route path="/buyer" element={<BuyerPage />} />
             <Route path="/seller" element={<SellerPage />} />
             <Route path="/login/register" element={<RegisterUser />} />
+            <Route path="/shoppingcart" element={<ShoppingCart user={user} />} />
           </Routes>
         </Router>
         <Footer />
