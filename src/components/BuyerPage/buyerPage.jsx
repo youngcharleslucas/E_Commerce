@@ -33,12 +33,12 @@ const BuyerPage = (props) => {
                   </Card.Text>
               </Card.Body>
               <ListGroup className="list-group-flush">
-                <ListGroupItem>{element.category}</ListGroupItem>
-                <ListGroupItem>{element.rating}</ListGroupItem>
-                <ListGroupItem>{element.price}</ListGroupItem>
+                <ListGroupItem>Category: {element.category}</ListGroupItem>
+                <ListGroupItem>Rating: {element.rating}</ListGroupItem>
+                <ListGroupItem>Price:{element.price}</ListGroupItem>
               </ListGroup>
               <Card.Body>
-                <Card.Link href="#">More Info</Card.Link>
+                <Card.Link href="/product/{element.id}">More Info</Card.Link>
                 <Card.Link href="#">Add to Cart</Card.Link>
               </Card.Body>
           </Card>)}
