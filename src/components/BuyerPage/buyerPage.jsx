@@ -4,21 +4,30 @@ import './buyerPage.css'
 import axios from "axios";
 
 const BuyerPage = (props) => {
-  {
+  const [products, setProducts] = useState([])
+ 
+  
+    useEffect(()=>{
+      getProduct()
+    },[])
+
     const getProduct = async () => {
-      let response = await.axios.get('https://localhost:44394/api/products')
-      console.log(response.data.items)
-    }
+      let response = await axios.get('https://localhost:44394/api/products')
+     setProducts(response.data)
+    
   }
+  
+
   return (
     <Container fluid>
       <React.Fragment>
+        {console.log(products)}
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-          {/* place mapping here */}
+          {products.map((element)=>
           <Card style={{flex: 1, width: '20px'}}>
             <Card.Img variant="top" src="holder.js/100px180?text=Image cap" size='sm'/>
               <Card.Body>
-                <Card.Title>Product Title</Card.Title> 
+                <Card.Title>{element.name}</Card.Title> 
                   <Card.Text>
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
@@ -33,7 +42,7 @@ const BuyerPage = (props) => {
                 <Card.Link href="#">More Info</Card.Link>
                 <Card.Link href="#">Add to Cart</Card.Link>
               </Card.Body>
-          </Card>
+          </Card>)}
         </CardGroup>
       </React.Fragment>
     </Container>

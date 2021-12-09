@@ -29,10 +29,7 @@ const NavBar = ({ user }) => {
               All Products
             </NavDropdown.Item>
           </NavDropdown>
-          <NavDropdown title="Login">
-            <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
-            <NavDropdown.Item href="/login/register">Register</NavDropdown.Item>
-          {/* {!user &&
+          {!user &&
               <React.Fragment>
                 <NavDropdown title="Login">
                   <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
@@ -46,8 +43,7 @@ const NavBar = ({ user }) => {
                 <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
               </NavDropdown>
             </React.Fragment>
-          }      */}
-           </NavDropdown>     
+          }     
         </Nav>
       </Navbar>
     </div>

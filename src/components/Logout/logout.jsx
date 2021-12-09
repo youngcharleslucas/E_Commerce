@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom';
 const Logout = (props) => {
 
     const deleteToken = () => {
-        localStorage.removeItem('token');
+        localStorage.clear();
         window.location = '/';
     }
 
