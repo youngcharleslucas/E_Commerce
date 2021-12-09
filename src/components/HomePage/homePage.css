@@ -1,4 +1,4 @@
-.bgimage {
+/* .bgimage {
   width: 100%;
   border-color: black;
   background-repeat: no-repeat;
@@ -9,13 +9,14 @@
   text-decoration-color: black;
   text-decoration-style: solid;
   /* padding-block: 10px; */
-  padding-top: 20%;
-  padding-bottom: 20%;
-}
 
 h1 {
-  color: white;
+  color: transparent;
   border: cornflowerblue;
+}
+
+footer {
+  background-color: black;
 }
 
 .divider {
@@ -27,7 +28,9 @@ h1 {
 body {
   background: url("https://images.unsplash.com/photo-1587006158786-7b79525a2147");
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .image {
