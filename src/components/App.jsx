@@ -18,7 +18,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: [],
+      user: '',
     };
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <NavBar />
+          <NavBar user={user}/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
