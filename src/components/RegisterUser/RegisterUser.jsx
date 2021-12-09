@@ -32,8 +32,8 @@ const RegisterUser = () => {
         console.log(response);
         if (response.request.status == 201)
         {
-            alert('Registration Complete, Please sign in.')
-            return window.location = "/"
+            alert('Registration Complete, Please sign in.');
+            return window.location = "/login";
         }
     }
     let handleChange = (event) => {
