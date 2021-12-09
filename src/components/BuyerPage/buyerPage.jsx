@@ -21,15 +21,6 @@ const BuyerPage = (props) => {
     <Container fluid>
       <React.Fragment>
         {console.log(products)}
-          <Form className="d-flex" className="product-style">
-          <FormControl
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-          />
-        <Button variant="dark">Search</Button>
-      </Form>
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
           {products.map((element)=>
           <Card style={{flex: 1, width: '20px'}}>
