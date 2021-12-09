@@ -1,29 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { Image } from "react-bootstrap";
+import "./homePage.css";
 
 const HomePage = (props) => {
   return (
     <div>
-      <Container>
+      <Container fluid>
         <React.Fragment>
-          <Image
+          <img
             src="https://i.ibb.co/NyQ3STw/anastase-maragos-m-HDOBf-SI7-I-unsplash.jpg"
             fluid
           />
-          <h1>Handmade furniture, just for you.</h1>
-          <Link to="/buyer">
-            <Button variant="dark" size="lg">
+          <div class="bgimage">
+            <h1>Handmade furniture, just for you.</h1>
+            <a href="/buyer" class="btn btn-dark">
               Buy
-            </Button>
-          </Link>
-          <Link to="/seller">
-            <Button variant="dark" size="lg">
+            </a>
+            <a href="/seller" class="btn btn-dark">
               Sell
-            </Button>
-          </Link>
+            </a>
+          </div>
         </React.Fragment>
       </Container>
     </div>
