@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage/homePage";
 import BuyerPage from "./BuyerPage/buyerPage";
 import SellerPage from "./SellerPage/sellerPage";
+import Login from "./Login/login";
+import Logout from "./Logout/logout";
 import NavBar from "./NavBar/navBar";
 import jwtDecode from "jwt-decode";
 import "bootstrap/dist/css/bootstrap.css";
@@ -38,9 +40,15 @@ class App extends Component {
           <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
             <Route path="/buyer" element={<BuyerPage />} />
+<<<<<<< HEAD
             <Route path="/seller" element={<SellerPage />} />
             <Route path="/login/register" element={<RegisterUser />} />
+=======
+            <Route path="/seller" element={<SellerPage />} />            
+>>>>>>> 35557188a1082be06a45453925f314d8b579f24d
           </Routes>
         </Router>
         <Footer />

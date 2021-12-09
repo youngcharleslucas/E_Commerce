@@ -1,29 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { Image } from "react-bootstrap";
+import "./homePage.css";
 
 const HomePage = (props) => {
   return (
     <div>
-      <Container>
+      <Container fluid>
         <React.Fragment>
-          <Image
-            src="https://i.ibb.co/W2q3tVS/anastase-maragos-m-HDOBf-SI7-I-unsplash.jpg"
-            fluid
-          />
-          <h1>Handmade furniture, just for you.</h1>
-          <Link to="/buyer">
-            <Button variant="dark" size="lg">
+          <div class="bgimage">
+            <h1>Handmade furniture, just for you.</h1>
+            <a href="/buyer" class="btn btn-dark">
               Buy
-            </Button>
-          </Link>
-          <Link to="/seller">
-            <Button variant="dark" size="lg">
+            </a>
+            <a href="/seller" class="btn btn-dark">
               Sell
-            </Button>
-          </Link>
+            </a>
+          </div>
         </React.Fragment>
       </Container>
     </div>
@@ -31,7 +24,3 @@ const HomePage = (props) => {
 };
 
 export default HomePage;
-
-{
-  /* <a href="https://ibb.co/W2q3tVS"><img src="https://i.ibb.co/W2q3tVS/anastase-maragos-m-HDOBf-SI7-I-unsplash.jpg" alt="anastase-maragos-m-HDOBf-SI7-I-unsplash" border="0"></a> */
-}
