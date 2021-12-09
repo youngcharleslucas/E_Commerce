@@ -13,7 +13,7 @@ const Login = (props) => {
     }
 
     const postUser = async (name, password) => {
-        let payload = {name: name, password: password}
+        let payload = {username: name, password: password}
         let response = await axios.post(`https://localhost:44394/api/authentication/login`, payload)
         console.log(response.data)
         localStorage.setItem('token', response.data.token)
