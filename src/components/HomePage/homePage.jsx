@@ -7,7 +7,7 @@ const HomePage = (props) => {
   return (
     <Container fluid>
       <React.Fragment>
-        <div class="image">
+        <div className="image">
           <h1>
             <img src="https://i.ibb.co/py4SmNk/Blank-2000-x-2000-1000-x-500.png" />
           </h1>
