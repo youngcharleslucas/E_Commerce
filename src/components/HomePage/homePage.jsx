@@ -8,10 +8,6 @@ const HomePage = (props) => {
     <div>
       <Container fluid>
         <React.Fragment>
-          <img
-            src="https://i.ibb.co/NyQ3STw/anastase-maragos-m-HDOBf-SI7-I-unsplash.jpg"
-            fluid
-          />
           <div class="bgimage">
             <h1>Handmade furniture, just for you.</h1>
             <a href="/buyer" class="btn btn-dark">
