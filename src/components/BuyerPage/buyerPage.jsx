@@ -7,8 +7,9 @@ const BuyerPage = (props) => {
     <Container fluid>
       <React.Fragment>
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-          <Card style={{flex: 1}}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+          {/* place mapping here */}
+          <Card style={{flex: 1, width: '20px'}}>
+            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" size='sm'/>
               <Card.Body>
                 <Card.Title>Product Title</Card.Title> 
                   <Card.Text>
