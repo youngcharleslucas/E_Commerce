@@ -2,40 +2,42 @@ import React, { useState } from "react";
 import "./footer.css";
 
 const Footer = () => (
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-xs-12">
-          <div class="first">
-            <h4>Navigation</h4>
-            <p>
-              <a href="http://localhost:3000/">Home</a> <br />
-              <a href="http://localhost:3000/products/all">Products</a>
-              <br />
-              <a href="http://localhost:3000/login">Login</a>
-              <br />
-            </p>
+  <body class="d-flex flex-column min-vh-100">
+    <footer className="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xs-12">
+            <div class="first">
+              <h4>Navigation</h4>
+              <p>
+                <a href="http://localhost:3000/">Home</a> <br />
+                <a href="http://localhost:3000/products/all">Products</a>
+                <br />
+                <a href="http://localhost:3000/login">Login</a>
+                <br />
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-4 col-xs-12">
-          <div class="second">
-            <img src="https://i.ibb.co/T051YYG/Blank-2000-x-2000-6.png" />
+          <div class="col-md-4 col-xs-12">
+            <div class="second">
+              <img src="https://i.ibb.co/T051YYG/Blank-2000-x-2000-6.png" />
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-4 col-xs-12">
-          <div class="third">
-            <h4> Contact</h4>
-            <strong>DevCode Upholstry</strong> <br />
-            123-456-7891 <br />
-            2021 Coding Way <br />
-            Chicago, IL 60649
+          <div class="col-md-4 col-xs-12">
+            <div class="third">
+              <h4> Contact</h4>
+              <strong>DevCode Upholstry</strong> <br />
+              123-456-7891 <br />
+              2021 Coding Way <br />
+              Chicago, IL 60649
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </footer>
+  </body>
 );
 export default Footer;
 

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, ListGroup , ListGroupItem, CardGroup } from "react-bootstrap";
+import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
 import './buyerPage.css'
 import axios from "axios";
 
 const BuyerPage = (props) => {
   const [products, setProducts] = useState([])
- 
   
     useEffect(()=>{
       getProduct()
@@ -13,10 +12,10 @@ const BuyerPage = (props) => {
 
     const getProduct = async () => {
       let response = await axios.get('https://localhost:44394/api/products')
-     setProducts(response.data)
+      setProducts(response.data)
     
   }
-  
+
 
   return (
     <Container fluid>
