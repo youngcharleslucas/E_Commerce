@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
 import axios from "axios";
 import './searchBar.css'
+import { ThemeContext } from "styled-components";
 
 const SearchBar = () => {
 
     const [searchResults, setSearchResults] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
+    const [products, setProducts] = useState([])
 
     const searchTermHandler = (evt) => {
         evt.preventDefault()
@@ -16,12 +18,23 @@ const SearchBar = () => {
     
     const onFormSubmit = (evt) => {
         evt.preventDefault()
+        getProducts()
         getSearchResults(searchTerm)
     }
 
-    const getSearchResults = async () => {
+    const getSearchResults = () => {
+        let searchResults = products.filter(function(el){
+            if(el.products.includes(searchTerm));
+            {
+                return true;
+            }
+        })
+        setSearchResults(searchResults)
+    }
+
+    const getProducts = async () => {
         let response = await axios.get('https://localhost:44394/api/products')
-        setSearchResults(response.data)
+        setProducts(response.data)
     }
 
     return (
@@ -44,7 +57,7 @@ const SearchBar = () => {
                 </div>
             </React.Fragment>
         <React.Fragment>
-            {console.log(searchResults)}
+            {console.log(products)}
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
             {searchResults.map((element)=>
             <Card style={{flex: 1, width: '20px'}}>
