@@ -36,7 +36,9 @@ const RegisterUser = () => {
       <form onSubmit={(event) => handleSubmit(event)}>
         <h1>User Registration</h1>
         <div>
-          <label className="first-name">First Name: </label>
+          <label className="first-name">
+            <h5 color="white">First Name: &nbsp;</h5>
+          </label>
           <input
             type="text"
             name="firstName"
@@ -46,7 +48,9 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>Last Name: </label>
+          <label>
+            <h5>Last Name: &nbsp;</h5>{" "}
+          </label>
           <input
             type="text"
             name="lastName"
@@ -56,7 +60,9 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>Username: </label>
+          <label>
+            <h5>Username: &nbsp;</h5>
+          </label>
           <input
             type="text"
             name="userName"
@@ -66,7 +72,9 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>Password: </label>
+          <label>
+            <h5>Password: &nbsp;</h5>
+          </label>
           <input
             type="text"
             name="password"
@@ -76,7 +84,9 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>Email: </label>
+          <label>
+            <h5>Email: &nbsp;</h5>
+          </label>
           <input
             type="text"
             name="email"
@@ -86,7 +96,9 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>Phone Number: </label>
+          <label>
+            <h5>Phone Number: &nbsp;</h5>
+          </label>
           <input
             type="text"
             name="phoneNumber"
