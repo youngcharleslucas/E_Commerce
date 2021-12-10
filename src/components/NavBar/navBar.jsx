@@ -21,7 +21,6 @@ const NavBar = ({ user }) => {
         </Navbar.Brand>
         <Nav>
           <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/products">Products</Nav.Link>
           {!user && (
             <React.Fragment>
               <NavDropdown title="Login">
