@@ -6,3 +6,7 @@
 .form-style {
   text-align: center;
 }
+
+form label {
+  color: #fff;
+}
