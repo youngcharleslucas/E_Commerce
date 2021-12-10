@@ -16,8 +16,15 @@ const ShoppingCart = ({user}) => {
       const jwt = localStorage.getItem('token')
       let response = await axios.get(`https://localhost:44394/api/shoppingcart/${user.id}`, {headers: {Authorization: 'Bearer ' + jwt}})
       setProducts(response.data)
+    }
+
+    const removeItem = async (productId) => {
+      const jwt = localStorage.getItem('token')
+      let response = await axios.delete(`https://localhost:44394/api/shoppingcart/${productId}`, {headers: {Authorization: 'Bearer ' + jwt}})
+      console.log(response.data)
+    }
           
-  }
+  
   
 
   return (
@@ -41,7 +48,7 @@ const ShoppingCart = ({user}) => {
                 <ListGroupItem>Price:{element.product.price}</ListGroupItem>
               </ListGroup>
               <Card.Body>
-                <Card.Link href="#">Remove Item</Card.Link>
+                <Card.Link onClick={() => removeItem(element.id)}>Remove Item</Card.Link>
               </Card.Body>
           </Card>)}
         </CardGroup>
