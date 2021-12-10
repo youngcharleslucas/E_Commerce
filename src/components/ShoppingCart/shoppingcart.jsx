@@ -20,8 +20,8 @@ const ShoppingCart = ({user}) => {
 
     const removeItem = async (productId) => {
       const jwt = localStorage.getItem('token')
-      let response = await axios.delete(`https://localhost:44394/api/shoppingcart/${productId}`, {headers: {Authorization: 'Bearer ' + jwt}})
-      console.log(response.data)
+      await axios.delete(`https://localhost:44394/api/shoppingcart/${productId}`, {headers: {Authorization: 'Bearer ' + jwt}})
+      getProduct()
     }
           
   
@@ -50,7 +50,8 @@ const ShoppingCart = ({user}) => {
               <Card.Body>
                 <Card.Link onClick={() => removeItem(element.id)}>Remove Item</Card.Link>
               </Card.Body>
-          </Card>)}
+          </Card>
+          )}
         </CardGroup>
       </React.Fragment>
     </Container>

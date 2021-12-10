@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
 import axios from "axios";
 import './searchBar.css'
-import { ThemeContext } from "styled-components";
 
 const SearchBar = () => {
 
