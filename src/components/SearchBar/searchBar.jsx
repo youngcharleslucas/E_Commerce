@@ -1,26 +1,50 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
-import './buyerPage.css'
 import axios from "axios";
+import './searchBar.css'
 
-const SearchBar = (props) => {
+const SearchBar = () => {
 
     const [searchResults, setSearchResults] = useState([])
+    const [searchTerm, setSearchTerm] = useState('')
 
-    useEffect(()=>{
-        getSearchResults()
-    },[])
+    const searchTermHandler = (evt) => {
+        evt.preventDefault()
+        setSearchTerm(evt.currentTarget.value)
+        console.log(searchTerm)
+    }
+    
+    const onFormSubmit = (evt) => {
+        evt.preventDefault()
+        getSearchResults(searchTerm)
+    }
 
-    const getSearchResults = async (props.searchTerm) => {
+    const getSearchResults = async () => {
         let response = await axios.get('https://localhost:44394/api/products')
         setSearchResults(response.data)
-    
     }
 
     return (
-    <Container fluid>
+        <Container fluid>
+            <React.Fragment>
+                <div className="search-bar ui segment">
+                <div className="field">
+                    <Form className="d-flex" className="product-style" onSubmit={onFormSubmit}>
+                        <FormControl
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            value={searchTerm}
+                            onChange={searchTermHandler}
+                            aria-label="Search"
+                        />
+                        <Button variant="dark">Search</Button>
+                    </Form>
+                </div>
+                </div>
+            </React.Fragment>
         <React.Fragment>
-            {console.log(products)}
+            {console.log(searchResults)}
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
             {searchResults.map((element)=>
             <Card style={{flex: 1, width: '20px'}}>

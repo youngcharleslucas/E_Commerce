@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
 import './buyerPage.css'
 import axios from "axios";
+import SearchBar from "../SearchBar/searchBar";
 
 const BuyerPage = (props) => {
   const [products, setProducts] = useState([])
@@ -21,6 +22,7 @@ const BuyerPage = (props) => {
     <Container fluid>
       <React.Fragment>
         {console.log(products)}
+        <SearchBar />
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
           {products.map((element)=>
           <Card style={{flex: 1, width: '20px'}}>
