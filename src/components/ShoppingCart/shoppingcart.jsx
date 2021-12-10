@@ -19,17 +19,18 @@ import axios from "axios";
 
 const ShoppingCart = ({user}) => {
   const [products, setProducts] = useState([])
- 
+  
   
     useEffect(()=>{
       getProduct()
-    },[])
+    },[user.id])
 
     const getProduct = async () => {
-      let response = await axios.get(`https://localhost:44394/api/shoppingcart/${user.id}`)
+      console.log(user)
+      const jwt = localStorage.getItem('token')
+      let response = await axios.get(`https://localhost:44394/api/shoppingcart/${user.id}`, {headers: {Authorization: 'Bearer ' + jwt}})
       setProducts(response.data)
-      
-    
+          
   }
   
 
