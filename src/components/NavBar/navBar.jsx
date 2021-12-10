@@ -42,7 +42,7 @@ const NavBar = ({ user }) => {
               <NavDropdown title="Logout">
                 <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/seller">Seller</Nav.Link>
+              <Nav.Link href="/product/add">Seller</Nav.Link>
               <Nav.Link href="/buyer">Buyer</Nav.Link>
               <Nav.Link href="/shoppingcart">Shopping Cart</Nav.Link>
             </React.Fragment>
