@@ -1,68 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
 import axios from "axios";
 import './searchBar.css'
 
 const SearchBar = () => {
+    const [searchResults, setSearchResults] = useState([]);
+    const [products, setProducts] = useState([]);
 
-    const [searchResults, setSearchResults] = useState([])
-    const [searchTerm, setSearchTerm] = useState('')
-    const [products, setProducts] = useState([])
+    useEffect(()=>{
+        getProducts();
+      },[])
 
-    const searchTermHandler = (evt) => {
-        evt.preventDefault()
-        setSearchTerm(evt.currentTarget.value)
-        console.log(searchTerm)
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let searchFor = document.getElementById("searchFor").value
+        getSearchResults(searchFor);
     }
-    
-    const onFormSubmit = (evt) => {
-        evt.preventDefault()
-        getProducts()
-        getSearchResults(searchTerm)
-    }
-
-    const getSearchResults = () => {
-        let searchResults = products.filter(function(el){
-            if(el.products.includes(searchTerm));
-            {
-                return true;
-            }
-        })
+    const getSearchResults = (searchFor) => {
+        let searchResults = products.filter(p => p.name.toLowerCase().includes(searchFor.toLowerCase()))
+        .map(products => (products));
         setSearchResults(searchResults)
     }
-
     const getProducts = async () => {
         let response = await axios.get('https://localhost:44394/api/products')
         setProducts(response.data)
     }
-
     return (
         <Container fluid>
-            <React.Fragment>
                 <div className="search-bar ui segment">
                 <div className="field">
-                    <Form className="d-flex" className="product-style" onSubmit={onFormSubmit}>
-                        <FormControl
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            value={searchTerm}
-                            onChange={searchTermHandler}
-                            aria-label="Search"
-                        />
-                        <Button variant="dark">Search</Button>
-                    </Form>
+                    <form className="d-flex" className="product-style" onSubmit={(event) => handleSubmit(event)}>
+                            <input
+                                id="searchFor"
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Search"
+                            />
+                        <button type="submit" variant="dark">Search</button>
+                    </form>
                 </div>
                 </div>
-            </React.Fragment>
         <React.Fragment>
-            {console.log(products)}
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
             {searchResults.map((element)=>
             <Card style={{flex: 1, width: '20px'}}>
             <Card.Img variant="top" src="holder.js/100px180?text=Image cap" size='sm'/>
                 <Card.Body>
-                    <Card.Title>{element.name}</Card.Title> 
+                    <Card.Title>{element.name}</Card.Title>
                     <Card.Text>
                     {element.description}
                     </Card.Text>
