@@ -43,7 +43,7 @@ class App extends Component {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
-            <Route path="/buyer" element={<BuyerPage />} />
+            <Route path="/buyer" element={<BuyerPage user={user} />} />
             <Route path="/seller" element={<SellerPage />} />
             <Route path="/login/register" element={<RegisterUser />} />
             <Route path="/shoppingcart" element={<ShoppingCart user={user} />} />

@@ -26,8 +26,8 @@ const SearchBar = () => {
         setProducts(response.data)
     }
     return (
-        <Container fluid>
-                <div className="search-bar ui segment">
+        <Container fluid className="product-style">
+                <div className="search-bar ui segment" >
                 <div className="field">
                     <form className="d-flex" className="product-style" onSubmit={(event) => handleSubmit(event)}>
                             <input

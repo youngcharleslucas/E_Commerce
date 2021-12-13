@@ -1,22 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, ListGroup , ListGroupItem, CardGroup} from "react-bootstrap";
+import { Button, Card, Container, ListGroup , ListGroupItem, CardGroup} from "react-bootstrap";
 import './buyerPage.css'
 import axios from "axios";
 import SearchBar from "../SearchBar/searchBar";
 
-const BuyerPage = () => {
+const BuyerPage = ({user}) => {
   const [products, setProducts] = useState([])
   
     useEffect(() => {
       getProduct()
-    },[])
+    },[user.id])
 
     const getProduct = async () => {
       let response = await axios.get('https://localhost:44394/api/products')
       setProducts(response.data)
-    
   }
 
+    const handleClick = async (event, elementId) => {
+      event.preventDefault();
+      const jwt = localStorage.getItem('token')
+      let payload = {
+        userId: user.id,
+        productId: elementId
+      }
+      let response = await axios.post('https://localhost:44394/api/shoppingcart/',payload, {headers: {Authorization: 'Bearer ' + jwt}})
+      console.log(response.data);
+      if (response.request.status === 201)
+      {
+          alert('Product added, thank you!');
+      }
+    }
 
   return (
     <Container fluid>
@@ -40,7 +53,7 @@ const BuyerPage = () => {
               </ListGroup>
               <Card.Body>
                 <Card.Link href="/product/{element.id}">More Info</Card.Link>
-                <Card.Link href="#">Add to Cart</Card.Link>
+                <Button onClick={(event) => handleClick(event, element.id)}>Add to Cart</Button>
               </Card.Body>
           </Card>)}
         </CardGroup>
