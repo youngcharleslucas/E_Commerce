@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, ListGroup , ListGroupItem, CardGroup } from "react-bootstrap";
+import { Button, Card, Container, ListGroup , ListGroupItem, CardGroup } from "react-bootstrap";
 import './shoppingcart.css'
 import axios from "axios";
 
@@ -44,7 +44,7 @@ const ShoppingCart = ({user}) => {
                 <ListGroupItem>Price:{element.product.price}</ListGroupItem>
               </ListGroup>
               <Card.Body>
-                <Card.Link onClick={() => removeItem(element.id)}>Remove Item</Card.Link>
+                <Button onClick={() => removeItem(element.id)}>Remove Item</Button>
               </Card.Body>
           </Card>
           )}
