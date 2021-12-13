@@ -35,7 +35,7 @@ const BuyerPage = ({user}) => {
     <Container fluid>
       <React.Fragment>
         {console.log(products)}
-        <SearchBar />
+        <SearchBar user={user}/>
         <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
           {products.map((element)=>
           <Card style={{flex: 1, width: '20px'}}>

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
+import { Button, Card, Container, ListGroup , ListGroupItem, CardGroup} from "react-bootstrap";
 import axios from "axios";
 import './searchBar.css'
 
-const SearchBar = () => {
+const SearchBar = ({user}) => {
     const [searchResults, setSearchResults] = useState([]);
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
         getProducts();
-      },[])
+      },[user.id])
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -25,6 +25,22 @@ const SearchBar = () => {
         let response = await axios.get('https://localhost:44394/api/products')
         setProducts(response.data)
     }
+
+    const handleClick = async (event, elementId) => {
+        event.preventDefault();
+        const jwt = localStorage.getItem('token')
+        let payload = {
+          userId: user.id,
+          productId: elementId
+        }
+        let response = await axios.post('https://localhost:44394/api/shoppingcart/',payload, {headers: {Authorization: 'Bearer ' + jwt}})
+        console.log(response.data);
+        if (response.request.status === 201)
+        {
+            alert('Product added, thank you!');
+        }
+      }
+
     return (
         <Container fluid className="product-style">
                 <div className="search-bar ui segment" >
@@ -59,7 +75,7 @@ const SearchBar = () => {
                 </ListGroup>
             <Card.Body>
                 <Card.Link href="/product/{element.id}">More Info</Card.Link>
-                <Card.Link href="#">Add to Cart</Card.Link>
+                <Button onClick={(event) => handleClick(event, element.id)}>Add to Cart</Button>
             </Card.Body>
             </Card>)}
             </CardGroup>
