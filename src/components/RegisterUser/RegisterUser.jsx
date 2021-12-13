@@ -36,12 +36,16 @@ const RegisterUser = () => {
     <div align="center">
       <h1 color="white">Reg</h1>
       <Container style={{ flex: 1, width: "40%", padding: "10%" }}>
-        <label for="exampleInputEmail1" class="form-label" color="white">
-          Email address
-        </label>
-        {/* <FormLabel size="xl">Registration</FormLabel> */}
+        <FormLabel
+          style={{
+            color: "white",
+            fontSize: "24px",
+            backgroundColor: "black",
+          }}
+        >
+          Registration
+        </FormLabel>
         <Form id="contact-form" onSubmit={(event) => handleSubmit(event)}>
-          <Form.Label>Register</Form.Label>
           <Form.Group controlId="formBasicFirstName">
             <Form.Control
               type="name"
@@ -95,9 +99,10 @@ const RegisterUser = () => {
               onChange={(event) => setPhoneNumber(event.target.value)}
               value={phoneNumber}
             />
+            &nbsp;
           </Form.Group>
           &nbsp;
-          <Button id="submit-button" variant="light" type="submit">
+          <Button type="submit" variant="dark">
             Submit
           </Button>
         </Form>
@@ -108,81 +113,81 @@ const RegisterUser = () => {
 
 export default RegisterUser;
 
-{
-  /* <form onSubmit={(event) => handleSubmit(event)}>
-        <h1>User Registration</h1>
-        <div>
-          <label class="text-light">
-            <h5>First Name: &nbsp;</h5>
-          </label>
-          <input
-            type="text"
-            name="firstName"
-            placeholder="John"
-            onChange={(event) => setFirstName(event.target.value)}
-            value={firstName}
-          />
-        </div>
-        <div>
-          <label className="text-light">
-            <h5>Last Name: &nbsp;</h5>{" "}
-          </label>
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Doe"
-            onChange={(event) => setLastName(event.target.value)}
-            value={lastName}
-          />
-        </div>
-        <div>
-          <label className="text-light">
-            <h5>Username: &nbsp;</h5>
-          </label>
-          <input
-            type="text"
-            name="userName"
-            placeholder="JohnDoe123"
-            onChange={(event) => setUserName(event.target.value)}
-            value={userName}
-          />
-        </div>
-        <div>
-          <label className="text-light">
-            <h5>Password: &nbsp;</h5>
-          </label>
-          <input
-            type="text"
-            name="password"
-            placeholder="password123"
-            onChange={(event) => setPassword(event.target.value)}
-            value={password}
-          />
-        </div>
-        <div>
-          <label className="text-light">
-            <h5>Email: &nbsp;</h5>
-          </label>
-          <input
-            type="text"
-            name="email"
-            placeholder="JohnDoe@gmail.com"
-            onChange={(event) => setEmail(event.target.value)}
-            value={email}
-          />
-        </div>
-        <div>
-          <label className="text-light">
-            <h5>Phone Number: &nbsp;</h5>
-          </label>
-          <input
-            type="text"
-            name="phoneNumber"
-            placeholder="555-555-5555"
-            onChange={(event) => setPhoneNumber(event.target.value)}
-            value={phoneNumber}
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form> */
-}
+// {
+//   /* <form onSubmit={(event) => handleSubmit(event)}>
+//         <h1>User Registration</h1>
+//         <div>
+//           <label class="text-light">
+//             <h5>First Name: &nbsp;</h5>
+//           </label>
+//           <input
+//             type="text"
+//             name="firstName"
+//             placeholder="John"
+//             onChange={(event) => setFirstName(event.target.value)}
+//             value={firstName}
+//           />
+//         </div>
+//         <div>
+//           <label className="text-light">
+//             <h5>Last Name: &nbsp;</h5>{" "}
+//           </label>
+//           <input
+//             type="text"
+//             name="lastName"
+//             placeholder="Doe"
+//             onChange={(event) => setLastName(event.target.value)}
+//             value={lastName}
+//           />
+//         </div>
+//         <div>
+//           <label className="text-light">
+//             <h5>Username: &nbsp;</h5>
+//           </label>
+//           <input
+//             type="text"
+//             name="userName"
+//             placeholder="JohnDoe123"
+//             onChange={(event) => setUserName(event.target.value)}
+//             value={userName}
+//           />
+//         </div>
+//         <div>
+//           <label className="text-light">
+//             <h5>Password: &nbsp;</h5>
+//           </label>
+//           <input
+//             type="text"
+//             name="password"
+//             placeholder="password123"
+//             onChange={(event) => setPassword(event.target.value)}
+//             value={password}
+//           />
+//         </div>
+//         <div>
+//           <label className="text-light">
+//             <h5>Email: &nbsp;</h5>
+//           </label>
+//           <input
+//             type="text"
+//             name="email"
+//             placeholder="JohnDoe@gmail.com"
+//             onChange={(event) => setEmail(event.target.value)}
+//             value={email}
+//           />
+//         </div>
+//         <div>
+//           <label className="text-light">
+//             <h5>Phone Number: &nbsp;</h5>
+//           </label>
+//           <input
+//             type="text"
+//             name="phoneNumber"
+//             placeholder="555-555-5555"
+//             onChange={(event) => setPhoneNumber(event.target.value)}
+//             value={phoneNumber}
+//           />
+//         </div>
+//         <button type="submit">Submit</button>
+//       </form> */
+// }
