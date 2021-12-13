@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, ListGroup , ListGroupItem, CardGroup, Form, FormControl, Button } from "react-bootstrap";
+import { Card, Container, ListGroup , ListGroupItem, CardGroup} from "react-bootstrap";
 import './buyerPage.css'
 import axios from "axios";
 import SearchBar from "../SearchBar/searchBar";
 
-const BuyerPage = (props) => {
+const BuyerPage = () => {
   const [products, setProducts] = useState([])
   
-    useEffect(()=>{
+    useEffect(() => {
       getProduct()
     },[])
 

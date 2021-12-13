@@ -6,7 +6,6 @@ import axios from "axios";
 const ShoppingCart = ({user}) => {
   const [products, setProducts] = useState([])
   
-  
     useEffect(()=>{
       getProduct()
     },[user.id])
@@ -24,9 +23,6 @@ const ShoppingCart = ({user}) => {
       getProduct()
     }
           
-  
-  
-
   return (
     <Container fluid>
       <React.Fragment>

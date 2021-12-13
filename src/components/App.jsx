@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Component } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage/homePage";
@@ -9,7 +9,6 @@ import Logout from "./Logout/logout";
 import NavBar from "./NavBar/navBar";
 import jwtDecode from "jwt-decode";
 import "bootstrap/dist/css/bootstrap.css";
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./App.css";
 import Footer from "./Footer/footer";
 import RegisterUser from "./RegisterUser/RegisterUser";
