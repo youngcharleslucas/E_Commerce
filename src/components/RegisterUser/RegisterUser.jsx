@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Form, Button, Container, FormLabel } from "react-bootstrap";
 
 const RegisterUser = () => {
   const [firstName, setFirstName] = useState("");
@@ -33,11 +34,86 @@ const RegisterUser = () => {
 
   return (
     <div align="center">
-      <form onSubmit={(event) => handleSubmit(event)}>
+      <h1 color="white">Reg</h1>
+      <Container style={{ flex: 1, width: "40%", padding: "10%" }}>
+        <label for="exampleInputEmail1" class="form-label" color="white">
+          Email address
+        </label>
+        {/* <FormLabel size="xl">Registration</FormLabel> */}
+        <Form id="contact-form" onSubmit={(event) => handleSubmit(event)}>
+          <Form.Label>Register</Form.Label>
+          <Form.Group controlId="formBasicFirstName">
+            <Form.Control
+              type="name"
+              placeholder="First Name"
+              onChange={(event) => setFirstName(event.target.value)}
+              value={firstName}
+              width="50%"
+            />
+          </Form.Group>
+          &nbsp;
+          <Form.Group controlId="formBasicLastName">
+            <Form.Control
+              type="name"
+              placeholder="Last Name"
+              onChange={(event) => setLastName(event.target.value)}
+              value={lastName}
+            />
+          </Form.Group>
+          &nbsp;
+          <Form.Group controlId="formBasicEmail">
+            <Form.Control
+              type="name"
+              placeholder="Username"
+              onChange={(event) => setUserName(event.target.value)}
+              value={userName}
+            />
+          </Form.Group>
+          &nbsp;
+          <Form.Group controlId="formBasicPassword">
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              onChange={(event) => setPassword(event.target.value)}
+              value={password}
+            />
+          </Form.Group>
+          &nbsp;
+          <Form.Group controlId="formBasicEmail">
+            <Form.Control
+              type="email"
+              placeholder="Email"
+              onChange={(event) => setEmail(event.target.value)}
+              value={email}
+            />
+          </Form.Group>
+          &nbsp;
+          <Form.Group controlId="formBasicPhone">
+            <Form.Control
+              type="phonenumber"
+              placeholder="Phone Number"
+              onChange={(event) => setPhoneNumber(event.target.value)}
+              value={phoneNumber}
+            />
+          </Form.Group>
+          &nbsp;
+          <Button id="submit-button" variant="light" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </Container>
+    </div>
+  );
+};
+
+export default RegisterUser;
+
+{
+  /* <form onSubmit={(event) => handleSubmit(event)}>
         <h1>User Registration</h1>
         <div>
-          <label className="first-name">
-            <h5 color="white">First Name: &nbsp;</h5>
+          <label class="text-light">
+            <h5>First Name: &nbsp;</h5>
           </label>
           <input
             type="text"
@@ -48,7 +124,7 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>
+          <label className="text-light">
             <h5>Last Name: &nbsp;</h5>{" "}
           </label>
           <input
@@ -60,7 +136,7 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>
+          <label className="text-light">
             <h5>Username: &nbsp;</h5>
           </label>
           <input
@@ -72,7 +148,7 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>
+          <label className="text-light">
             <h5>Password: &nbsp;</h5>
           </label>
           <input
@@ -84,7 +160,7 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>
+          <label className="text-light">
             <h5>Email: &nbsp;</h5>
           </label>
           <input
@@ -96,7 +172,7 @@ const RegisterUser = () => {
           />
         </div>
         <div>
-          <label>
+          <label className="text-light">
             <h5>Phone Number: &nbsp;</h5>
           </label>
           <input
@@ -108,9 +184,5 @@ const RegisterUser = () => {
           />
         </div>
         <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
-};
-
-export default RegisterUser;
+      </form> */
+}
