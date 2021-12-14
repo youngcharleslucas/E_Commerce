@@ -54,6 +54,7 @@ const AddProduct = () => {
         </FormLabel>
         <Form id="add-product" onSubmit={(event) => handleSubmit(event)}>
           <Form.Group controlId="formProductName">
+            Name
             <Form.Control
               type="product"
               placeholder="Solid Walnut Dining Table"
@@ -63,6 +64,7 @@ const AddProduct = () => {
           </Form.Group>
           &nbsp;
           <Form.Group controlId="formPrice">
+            Price
             <Form.Control
               type="price"
               placeholder="5900.00"
@@ -72,6 +74,7 @@ const AddProduct = () => {
           </Form.Group>
           &nbsp;
           <Form.Group controlId="formDescription">
+            Description
             <Form.Control
               type="description"
               placeholder="Made with just 3 wide Walnut boards for the top. Solid wood..."
@@ -81,6 +84,7 @@ const AddProduct = () => {
           </Form.Group>
           &nbsp;
           <Form.Group controlId="formCategory">
+            Category
             <Form.Control
               type="category"
               placeholder="Dining Room"
@@ -90,6 +94,7 @@ const AddProduct = () => {
           </Form.Group>
           &nbsp;
           <Form.Group controlId="formRating">
+            Rating
             <Form.Control
               type="rating"
               placeholder="1-5"
