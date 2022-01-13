@@ -62,6 +62,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- Site Link References Start -->
 
 [techhire]: https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/Homepage%20Srceen%20Shot.PNG
-[homepage-screenshot]:https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/Homepage%20Srceen%20Shot.PNG
+<!-- [homepage-screenshot]:https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/Homepage%20Srceen%20Shot.PNG -->
+[homepage-screenshot]:public/images/Homepage Srceen Shot.PNG
 
 <!-- Site Link References End -->
