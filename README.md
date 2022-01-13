@@ -1,4 +1,4 @@
-## React.js E-Commerce site
+## E-Commerce Site
 
 <!-- <img align="left" alt="Visual Studio Code" width="80vw" src="https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/Homepage%20Srceen%20Shot.PNG" /> -->
 
