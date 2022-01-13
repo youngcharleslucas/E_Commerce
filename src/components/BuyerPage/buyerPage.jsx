@@ -14,7 +14,7 @@ const BuyerPage = ({user}) => {
     const getProduct = async () => {
       let response = await axios.get('https://localhost:44394/api/products')
       setProducts(response.data)
-  }
+    }
 
     const handleClick = async (event, elementId) => {
       event.preventDefault();

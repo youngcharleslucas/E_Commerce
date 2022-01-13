@@ -14,7 +14,8 @@ footer {
 }
 
 body {
-  background: url("https://images.unsplash.com/photo-1587006158786-7b79525a2147");
+  /* background: url('https://i.imgur.com/5e8o6sc.jpg'); */
+  background: url('https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/anastase-maragos-m-HDOBfSI7I-unsplash-2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
