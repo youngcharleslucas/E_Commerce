@@ -33,36 +33,35 @@
 
 ![][homepage-screenshot]
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+#### devCode Upholstery
+This e-commerce website is tailored for the home designer looking for style and quality that cannot be replicated. Products listed and sold are made by individuals. Get a one of a kind element that is unique to your decor!
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+On this site:
+* Users creat an account by registering their information
+* Sellers can post thier product to the market
+* Buyers can veiw a list of products on the market
+* Buyers can use a search filter to limit product results
+* Buyers can add products to a shopping cart
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [React.js](https://reactjs.org/)
-* [Bootstrap](https://getbootstrap.com)
-
+<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
+<img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+<img align="left" alt="Bootstrap" width="26px" src="https://user-images.githubusercontent.com/42708686/121468850-160d7900-c9d9-11eb-9cc2-b3db7bb52df3.png" />
+<img align="left" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" />
+<img align="left" alt="C#" width="26px" src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/csharp.svg" />
+<img align="left" alt="ASP.NET Core" width="26px" src="https://raw.githubusercontent.com/nikhilgorantla/nikhilgorantla/master/icons/dotnetcore.png" />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- [![Home Page Screen Shot][homepage-screenshot]](https://example.com) -->
-[homepage-screenshot](https://example.com)
+
 
 <!-- Site Link References Start -->
 
 [techhire]: https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/Homepage%20Srceen%20Shot.PNG
-<!-- [homepage-screenshot]:https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/Homepage%20Srceen%20Shot.PNG -->
-[homepage-screenshot]:public/images/Homepage Srceen Shot.PNG
+[homepage-screenshot]:https://raw.githubusercontent.com/youngcharleslucas/E_Commerce/main/public/images/Homepage%20Srceen%20Shot.PNG
+
 
 <!-- Site Link References End -->
