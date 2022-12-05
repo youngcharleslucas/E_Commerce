@@ -23,7 +23,7 @@
 This e-commerce website is tailored for the home designer looking for style and quality that cannot be replicated. Products listed and sold are made by individuals. Get a one of a kind element that is unique to your decor!
 
 On this site:
-* Users creat an account by registering their information
+* Users create an account by registering their information
 * Sellers can post thier product to the market
 * Buyers can veiw a list of products on the market
 * Buyers can use a search filter to limit product results
